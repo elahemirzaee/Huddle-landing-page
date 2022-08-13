@@ -173,6 +173,11 @@ MEDIA QUERIES
     .hero {
         flex-direction: column;
         margin-top: 5rem;
+        padding: 2rem 1rem;
+    }
+
+    .get-started {
+        display: inline;
     }
 
     .try-free {
@@ -181,6 +186,10 @@ MEDIA QUERIES
 
     .intro, .intro-img {
         width: 100%;
+    }
+
+    .intro-img img {
+        margin-top: 1rem;
     }
 
     li img {
