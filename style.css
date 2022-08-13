@@ -1,0 +1,49 @@
+/*
+* IMPORT FONTS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --Pale-Cyan: hsl(193, 100%, 96%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+    --Dark-Cyan: hsl(192, 100%, 9%);
+    --white: white;
+    /*600 Heading*/
+    --Poppins: 'Poppins', sans-serif;
+    /*400 700 Body*/
+    --Sans: 'Open Sans', sans-serif;
+}
+
+/*
+* RESET DEFAULT STYLES
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: var(--Sans);
+}
+
+h1, h2, h3 {
+    font-family: var(--Poppins);
+}
+
+/* Intro Heading Animation */
+.fade {
+    animation: fadeIn 1500ms ease-in-out; /*   delay iteration-count direction fill-mode  */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
