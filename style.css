@@ -151,6 +151,40 @@ p {
     margin-top: 5rem;
 }
 
+/*
+* Layout
+*/
+.layout {
+    width: 95%;
+    /*height: 1280px;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 2rem 0;
+    gap: 2.5rem;
+}
+
+.card {
+    padding: 2rem 5rem;
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    border-radius: 0.7rem;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: calc(1rem + 2vw);
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    flex-shrink: 0;
+    width: 40%;
+    max-width: 500px;
+    object-fit: contain;
+}
 
 /*
 MEDIA QUERIES
@@ -214,6 +248,7 @@ MEDIA QUERIES
     .intro h1 {
         font-size: 2rem;
     }
+
     .intro-img img {
         width: 85%;
     }
