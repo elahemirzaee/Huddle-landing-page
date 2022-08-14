@@ -161,22 +161,29 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3rem 2rem 0;
+    padding: 3rem 2rem;
     gap: 2.5rem;
 }
 
 .card {
-    padding: 2rem 5rem;
+    padding: 2rem 0;
     box-shadow: 0 0 15px rgb(0 0 0 / 10%);
     border-radius: 0.7rem;
     width: 100%;
     overflow: hidden;
     text-align: left;
-    flex-direction: row-reverse;
     justify-content: space-evenly;
     gap: calc(1rem + 2vw);
     display: flex;
     align-items: center;
+}
+
+.card.row {
+    flex-direction: row;
+}
+
+.card.row-reverse {
+    flex-direction: row-reverse;
 }
 
 .card img {
@@ -184,6 +191,18 @@ p {
     width: 40%;
     max-width: 500px;
     object-fit: contain;
+}
+
+article h3 {
+    color: var(--Dark-Cyan);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+article p {
+    color: var(--Grayish-Blue);
+    font-size: 1rem;
+    text-align: left;
 }
 
 /*
@@ -242,6 +261,24 @@ MEDIA QUERIES
     h1 {
         font-size: 1.4rem;
     }
+
+    .card.row, .card.row-reverse {
+        flex-direction: column;
+    }
+
+    .card h3, .card p {
+        text-align: center;
+    }
+
+    .card h3 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -251,5 +288,20 @@ MEDIA QUERIES
 
     .intro-img img {
         width: 85%;
+    }
+
+    .card img {
+        width: 70%;
+        max-width: 70%;
+    }
+
+    .card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        padding: 2rem;
     }
 }
