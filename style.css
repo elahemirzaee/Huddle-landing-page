@@ -42,9 +42,11 @@ h1, h2, h3 {
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(100px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -157,7 +159,7 @@ p {
 .layout {
     width: 95%;
     /*height: 1280px;*/
-    margin: 0 auto;
+    margin: 5rem auto 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -167,15 +169,48 @@ p {
 
 .card {
     padding: 2rem 0;
-    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
     border-radius: 0.7rem;
-    width: 100%;
+    /*width: 100%;*/
     overflow: hidden;
     text-align: left;
     justify-content: space-evenly;
     gap: calc(1rem + 2vw);
     display: flex;
     align-items: center;
+}
+
+.fadeToLeft {
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    -webkit-animation: fadeToLeft 2s both;
+    width: 100%;
+}
+
+.fadeToRight {
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    -webkit-animation: fadeToRight 2s both;
+    width: 100%;
+}
+
+@keyframes fadeToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .card.row {
