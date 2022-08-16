@@ -39,16 +39,6 @@ h1, h2, h3 {
     animation: fadeIn 1500ms ease-in-out; /*   delay iteration-count direction fill-mode  */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 header {
     width: 100%;
@@ -170,7 +160,6 @@ p {
 .card {
     padding: 2rem 0;
     border-radius: 0.7rem;
-    /*width: 100%;*/
     overflow: hidden;
     text-align: left;
     justify-content: space-evenly;
@@ -189,28 +178,6 @@ p {
     box-shadow: 0 0 15px rgb(0 0 0 / 10%);
     -webkit-animation: fadeToRight 2s both;
     width: 100%;
-}
-
-@keyframes fadeToLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeToRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .card.row {
@@ -238,6 +205,61 @@ article p {
     color: var(--Grayish-Blue);
     font-size: 1rem;
     text-align: left;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-card {
+    max-width: 500px;
+    height: 200px;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    border-radius: 0.7rem;
+    gap: calc(1rem + 2vw);
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-card h4 {
+    color: var(--Dark-Cyan);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--Dark-Cyan);
+    padding: 15rem 5rem 3rem;
+    /*height: 400px;*/
+}
+
+.logo img {
+    filter: brightness(0) invert(1);
+}
+
+.addresses {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.addresses li {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.addresses li p, .addresses li a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 2rem;
 }
 
 /*
@@ -335,8 +357,57 @@ MEDIA QUERIES
     }
 }
 
+@media (max-width: 576px) {
+    .question-card {
+        max-width: 100%;
+        width: 95%;
+        padding: 1rem;
+    }
+
+    /*.question-card h4 {*/
+    /*    text-align: center;*/
+    /*}*/
+}
+
 @media (max-width: 1200px) {
     .card {
         padding: 2rem;
+    }
+}
+
+/*
+* Animations
+*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
