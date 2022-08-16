@@ -306,9 +306,12 @@ footer {
     border-color: var(--pink);
 }
 
-/*.social a:hover .social {*/
-/*    border-color: var(--pink);*/
-/*}*/
+.copy-right {
+    display: block;
+    float: right;
+    color: white;
+    margin-top: 1rem;
+}
 
 /*
 MEDIA QUERIES
@@ -421,6 +424,10 @@ MEDIA QUERIES
     .addresses li p , .addresses li a, .footer-links a {
         font-size: 0.9rem;
     }
+
+    .copy-right {
+       font-size: 1rem;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -443,6 +450,11 @@ MEDIA QUERIES
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .copy-right {
+        text-align: center;
+        float: none;
     }
 }
 
